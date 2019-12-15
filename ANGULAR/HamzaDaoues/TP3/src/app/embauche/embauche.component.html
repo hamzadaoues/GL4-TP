@@ -1,0 +1,24 @@
+<body>
+
+
+
+
+    <div class="row">
+      <div *ngFor="let personne of EmbaucheList" class="col-md-5">
+        <div  class="card" style="width: 18rem;">
+          <img src="assets/photos_cv/{{personne.id}}.jpg" class="card-img-top" alt="..." height="180px">
+          <div class="card-body">
+            <h5 class="card-title">{{personne.prenom}} {{personne.nom}}</h5>
+            <p class="card-text">{{personne.job}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+</body>

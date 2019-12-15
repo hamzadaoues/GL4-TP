@@ -1,0 +1,56 @@
+<div class="card">
+
+  <div class="card-header">
+    Exercice1
+  </div>
+
+  <div class="card-body">
+
+    <div class="row">
+      <!-- text color -->
+      <div class="col-3">
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">COLOR</span>
+          </div>
+          <input [(ngModel)]="MyStyle.color" (change)="changeStyle()" type="text" class="form-control" placeholder="COLOR" aria-label="COLOR" aria-describedby="basic-addon1">
+        </div>
+
+      </div>
+      <!-- text size -->
+      <div class="col-3">
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">size</span>
+          </div>
+          <input [(ngModel)]="MyStyle.fontsize" (change)="changeStyle()" type="text" class="form-control" placeholder="size" aria-label="size" aria-describedby="basic-addon1">
+        </div>
+
+      </div>
+      <!-- text  police-->
+      <div class="col-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Options</label>
+          </div>
+          <select [(ngModel)]="MyStyle.fontfamily" (change)="changeStyle()"  class="custom-select" id="inputGroupSelect01">
+            <option selected value="Arial">Arial</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Impact">Impact</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <blockquote class="blockquote text-center">
+      <p [(ngStyle)]="MyStyle2" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
+
+
+  </div>
+
+
+</div>

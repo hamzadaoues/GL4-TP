@@ -1,0 +1,34 @@
+
+<div class="container">
+<div class="row">
+
+  <div class="col-md-4">
+
+    <input type = "text" [(ngModel)]="cv.prenom" style="border: none">
+    <div class="card card-price">
+      <div class="card-img">
+        <img src="assets/photos_cv/{{cv.id}}.jpg" height="358px" >
+        <div class="card-caption">
+          <span class="h2">{{cv.nom}}</span>
+          <p>{{cv.job}}</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="lead">Information</div>
+        <table class="table">
+          <tr><th></th><th>Information</th></tr>
+          <tr><td>Nom</td><td class="price"><input *ngIf="modif" type="text" [(ngModel)]="cv.nom"><span *ngIf="!modif">{{cv.nom}}</span> </td></tr>
+          <tr><td>Prenom</td><td class="price"><input *ngIf="modif" type="text" [(ngModel)]="cv.prenom"><span *ngIf="!modif">{{cv.prenom}}</span> </td></tr>
+          <tr><td>Age</td><td class="price"><input *ngIf="modif" type="text" [(ngModel)]="cv.age"><span *ngIf="!modif">{{cv.age}}</span> </td></tr>
+          <tr><td>Carte d'identité</td><td class="price"><input *ngIf="modif" type="text" [(ngModel)]="cv.cin"><span *ngIf="!modif">{{cv.cin}}</span> </td></tr>
+          <tr><td>Job</td><td class="price"><input *ngIf="modif" type="text" [(ngModel)]="cv.job"><span *ngIf="!modif">{{cv.job}}</span> </td></tr>
+        </table>
+
+      </div>
+      <button class="btn-simple" (click)="modification()">Modifier</button>
+      <button class="btn-simple" (click)="save()">Enregistrer</button>
+    </div>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,7 @@
+<br><br>
+<div *ngFor="let cv of cvservice.getCv()" (click)="onChangeCV(cv)" class="list-group">
+  <div class="list-group-item list-group-item-action">
+    <app-item-component [cv]="cv"></app-item-component>
+
+  </div>
+</div>

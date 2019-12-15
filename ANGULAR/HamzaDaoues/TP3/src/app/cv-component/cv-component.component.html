@@ -1,0 +1,19 @@
+
+<div  class="card">
+   <div class="card-body">
+
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-6">
+            <app-liste-component (changeCV)="changeCV($event)"></app-liste-component>
+         </div>
+         <div *ngIf="selected_cv" class="col-lg-3">
+           <app-detail-component [cv]="selected_cv"></app-detail-component>
+         </div>
+       </div>
+     </div>
+
+   </div>
+
+</div>
+
